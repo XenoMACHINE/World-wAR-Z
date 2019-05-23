@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public float speed = 6f;
+    public float initialSpeed = 6f;
 
     [SerializeField] Camera camera;
     [SerializeField] FixedJoystick joystick_move;
@@ -16,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody playerRigidBody;
     int floorMask;
     float camRayLength = 100f;
+
 
     // Start is called before the first frame update
     void Awake()

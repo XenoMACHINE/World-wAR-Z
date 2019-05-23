@@ -723,6 +723,7 @@
     <None Include="Assets\Editor\Vuforia\Vuforia_Motorcycle_MarsLander_HL\authoringinfo.xml" />
     <None Include="Assets\Editor\Vuforia\Vuforia_Motorcycle_Marslander\authoringinfo.xml" />
     <None Include="Assets\Lesson_Ressources\Fonts\LuckiestGuy\FontLicense.txt" />
+    <None Include="Assets\RainEntertainment\FantasyMonster4\Demon Blade Lord\readMe.txt" />
     <None Include="Assets\SamplesResources\SceneAssets\ModelTargets\Shaders\RadialTexture.shader" />
     <None Include="Assets\SamplesResources\SceneAssets\ModelTargetsTrained\Shaders\Scan.shader" />
     <None Include="Assets\SamplesResources\SceneAssets\ModelTargetsTrained\Shaders\TimedDiffuseNoCull.shader" />
