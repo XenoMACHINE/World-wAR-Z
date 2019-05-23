@@ -12,9 +12,12 @@ public class EnnemyHealth : MonoBehaviour
     public AudioClip deathClip;                 // The sound to play when the enemy dies.
 
 
+    GameObject player;
+    PlayerExperience playerExperience;
+    EnemyLoots loots;
     Animator anim;                              // Reference to the animator.
     AudioSource enemyAudio;                     // Reference to the audio source.
-    ParticleSystem hitParticles;                // Reference to the particle system that plays when the enemy is damaged.
+    //ParticleSystem hitParticles;                // Reference to the particle system that plays when the enemy is damaged.
     CapsuleCollider capsuleCollider;            // Reference to the capsule collider.
     bool isDead;                                // Whether the enemy is dead.
     bool isSinking;                             // Whether the enemy has started sinking through the floor.
@@ -25,8 +28,11 @@ public class EnnemyHealth : MonoBehaviour
         // Setting up the references.
         anim = GetComponent<Animator>();
         enemyAudio = GetComponent<AudioSource>();
-        hitParticles = GetComponentInChildren<ParticleSystem>();
+        //hitParticles = GetComponentInChildren<ParticleSystem>();
         capsuleCollider = GetComponent<CapsuleCollider>();
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerExperience = player.GetComponent<PlayerExperience>();
+        loots = GetComponent<EnemyLoots>();
 
         // Setting the current health when the enemy first spawns.
         currentHealth = startingHealth;
@@ -50,6 +56,8 @@ public class EnnemyHealth : MonoBehaviour
             // ... no need to take damage so exit the function.
             return;
 
+        anim.SetTrigger("Hit");
+
         // Play the hurt sound effect.
         enemyAudio.Play();
 
@@ -57,10 +65,10 @@ public class EnnemyHealth : MonoBehaviour
         currentHealth -= amount;
 
         // Set the position of the particle system to where the hit was sustained.
-        hitParticles.transform.position = hitPoint;
+        //hitParticles.transform.position = hitPoint;
 
         // And play the particles.
-        hitParticles.Play();
+        //hitParticles.Play();
 
         // If the current health is less than or equal to zero...
         if (currentHealth <= 0)
@@ -79,12 +87,23 @@ public class EnnemyHealth : MonoBehaviour
         // Turn the collider into a trigger so shots can pass through it.
         capsuleCollider.isTrigger = true;
 
+        playerExperience.AddExperience(scoreValue);
+
         // Tell the animator that the enemy is dead.
         anim.SetTrigger("Dead");
+        float random = UnityEngine.Random.value;
+
+        if (random <= loots.chance){
+            int randomIndex = new System.Random().Next(loots.loots.Count);
+            Instantiate(loots.loots[randomIndex], this.transform);
+            Instantiate(loots.loots[randomIndex], this.transform.position, this.transform.rotation, this.transform.parent);
+        }
+
 
         // Change the audio clip of the audio source to the death clip and play it (this will stop the hurt clip playing).
         enemyAudio.clip = deathClip;
         enemyAudio.Play();
+        Destroy(gameObject, 5f);
     }
 
 
@@ -98,9 +117,6 @@ public class EnnemyHealth : MonoBehaviour
 
         // The enemy should no sink.
         isSinking = true;
-
-        // Increase the score by the enemy's score value.
-        ScoreManager.Instance.Score += scoreValue;
 
         // After 2 seconds destory the enemy.
         Destroy(gameObject, 2f);

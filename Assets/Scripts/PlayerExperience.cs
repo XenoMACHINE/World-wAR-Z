@@ -51,5 +51,6 @@ public class PlayerExperience : MonoBehaviour
 
         playerAttack.damagePerShot = playerAttack.initialDamagePerShot * (1 + (statsMultiplier * currentLevel));
         playerAttack.timeBetweenBullets = playerAttack.initialTimeBetweenBullets * (1 - (statsMultiplier * currentLevel));
+        ScoreManager.Instance.Level = currentLevel;
     }
 }

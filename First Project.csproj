@@ -733,6 +733,7 @@
     <Compile Include="Assets\Scripts\CustomTrackableEventHandler.cs" />
     <Compile Include="Assets\Scripts\EnemyAttack.cs" />
     <Compile Include="Assets\Scripts\EnemyHealth.cs" />
+    <Compile Include="Assets\Scripts\EnemyLoots.cs" />
     <Compile Include="Assets\Scripts\EnemyManager.cs" />
     <Compile Include="Assets\Scripts\EnnemyAttack.cs" />
     <Compile Include="Assets\Scripts\EnnemyHealth.cs" />
@@ -740,7 +741,6 @@
     <Compile Include="Assets\Scripts\GameManager\CustomGameManager.cs" />
     <Compile Include="Assets\Scripts\GameOverManager.cs" />
     <Compile Include="Assets\Scripts\ItemEffects.cs" />
-    <Compile Include="Assets\Scripts\ObjectManager.cs" />
     <Compile Include="Assets\Scripts\PlaneManager Files\PlaneManagerCustom.cs" />
     <Compile Include="Assets\Scripts\PlayerAttack.cs" />
     <Compile Include="Assets\Scripts\PlayerEffects.cs" />

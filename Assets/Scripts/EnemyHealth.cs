@@ -84,7 +84,6 @@ public class EnemyHealth : MonoBehaviour
         // Turn the collider into a trigger so shots can pass through it.
         capsuleCollider.isTrigger = true;
 
-        ScoreManager.Instance.Score += scoreValue;
         playerExperience.AddExperience(scoreValue);
 
         // Tell the animator that the enemy is dead.

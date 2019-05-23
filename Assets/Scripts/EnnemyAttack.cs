@@ -70,6 +70,8 @@ public class EnnemyAttack : MonoBehaviour
         // Reset the timer.
         timer = 0f;
 
+        anim.SetTrigger("Attack");
+
         // If the player has health to lose...
         if (playerHealth.currentHealth > 0)
         {

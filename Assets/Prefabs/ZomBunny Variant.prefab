@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d81054b0fade347278b3858e95ed6e3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 2
 --- !u!114 &1180691978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,8 +42,27 @@ MonoBehaviour:
   startingHealth: 25
   currentHealth: 0
   sinkSpeed: 2.5
-  scoreValue: 5
+  scoreValue: 50
   deathClip: {fileID: 0}
+--- !u!114 &5932613713123079407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266818197069639132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50a97f8422893477591718cbb417664e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loots:
+  - {fileID: 8913792525253442002, guid: da774d0f9e28f4bfb90a5bb6133e3401, type: 3}
+  - {fileID: 8913792525253442002, guid: da774d0f9e28f4bfb90a5bb6133e3401, type: 3}
+  - {fileID: 9112535335800993301, guid: aac9f9599528f4b5abd2995697b960ed, type: 3}
+  - {fileID: 2553538299484445578, guid: 83562064539614531b3975bf1d6ec6ad, type: 3}
+  - {fileID: 749455051808224400, guid: a1f3493676d13439b973e23e8a290b49, type: 3}
+  chance: 0.05
 --- !u!1001 &1266818197069736830
 PrefabInstance:
   m_ObjectHideFlags: 0

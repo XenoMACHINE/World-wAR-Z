@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 1097724958876428380}
   - component: {fileID: 1092848550965906635}
   - component: {fileID: 3180735512044518565}
+  - component: {fileID: 3308052902178514864}
   m_Layer: 9
   m_Name: ZomBear Variant
   m_TagString: Untagged
@@ -320,7 +321,7 @@ MonoBehaviour:
   startingHealth: 150
   currentHealth: 0
   sinkSpeed: 2.5
-  scoreValue: 20
+  scoreValue: 100
   deathClip: {fileID: 0}
 --- !u!114 &1092848550965906635
 MonoBehaviour:
@@ -334,7 +335,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d81054b0fade347278b3858e95ed6e3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  car: {fileID: 0}
   speed: 3
 --- !u!114 &3180735512044518565
 MonoBehaviour:
@@ -350,6 +350,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBetweenAttacks: 0.5
   attackDamage: 10
+--- !u!114 &3308052902178514864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7389226350816495402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50a97f8422893477591718cbb417664e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loots:
+  - {fileID: 749455051808224400, guid: a1f3493676d13439b973e23e8a290b49, type: 3}
+  - {fileID: 749455051808224400, guid: a1f3493676d13439b973e23e8a290b49, type: 3}
+  - {fileID: 749455051808224400, guid: a1f3493676d13439b973e23e8a290b49, type: 3}
+  - {fileID: 8913792525253442002, guid: da774d0f9e28f4bfb90a5bb6133e3401, type: 3}
+  - {fileID: 8913792525253442002, guid: da774d0f9e28f4bfb90a5bb6133e3401, type: 3}
+  chance: 0.08
 --- !u!1 &7389226350816495404
 GameObject:
   m_ObjectHideFlags: 0

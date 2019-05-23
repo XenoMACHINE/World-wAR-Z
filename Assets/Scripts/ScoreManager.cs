@@ -4,10 +4,10 @@ using System.Collections;
 
 public class ScoreManager : MonoBehaviour
 {
-    private static int _score;        // The player's score.
+    private static int _level;        // The player's score.
     Text text;                      // Reference to the Text component.
 
-    public int Score { set { _score = value; RefreshDisplay(); } get { return _score; }}
+    public int Level { set { _level = value; RefreshDisplay(); } get { return _level; } }
 
     public static ScoreManager Instance = null;
 
@@ -22,7 +22,7 @@ public class ScoreManager : MonoBehaviour
         text = GetComponent<Text>();
 
         // Reset the score.
-        _score = 0;
+        _level = 1;
     }
 
     void Update()
@@ -30,6 +30,6 @@ public class ScoreManager : MonoBehaviour
     }
 
     void RefreshDisplay(){
-        text.text = "Score: " + _score;
+        text.text = "Niveau: " + _level;
     }
 }
