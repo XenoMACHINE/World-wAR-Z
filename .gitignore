@@ -1,0 +1,6 @@
+Logs/
+obj/
+Temp/
+Packages/
+zombie-ios-build*/
+.vs/
