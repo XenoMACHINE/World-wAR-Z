@@ -39,6 +39,7 @@ public class PlayerExperience : MonoBehaviour
         {
             SetLevel(level);
         }
+        ScoreManager.Instance.XPToNextLevel = 500 + (currentExperience - 500 * currentLevel);
     }
 
     public void SetLevel(int level)
