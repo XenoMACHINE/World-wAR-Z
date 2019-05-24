@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 public class PlayerEffects : MonoBehaviour
 {
@@ -52,6 +53,8 @@ public class PlayerEffects : MonoBehaviour
 
         itemEffect.itemSlider = Instantiate(sliderPrefab, hud.transform);
         itemEffect.slider = itemEffect.itemSlider.gameObject.GetComponent<Slider>();
+
+        (itemEffect.slider as UnityEngine.UI.Slider).GetComponentsInChildren<UnityEngine.UI.Image>().FirstOrDefault(t => t.name == "Fill").color = itemEffect.flashColor;
 
         damageImage.color = itemEffect.flashColor;
 
