@@ -17,7 +17,7 @@ public class EnnemyHealth : MonoBehaviour
     EnemyLoots loots;
     Animator anim;                              // Reference to the animator.
     AudioSource enemyAudio;                     // Reference to the audio source.
-    //ParticleSystem hitParticles;                // Reference to the particle system that plays when the enemy is damaged.
+    ParticleSystem hitParticles;                // Reference to the particle system that plays when the enemy is damaged.
     CapsuleCollider capsuleCollider;            // Reference to the capsule collider.
     bool isDead;                                // Whether the enemy is dead.
     bool isSinking;                             // Whether the enemy has started sinking through the floor.
@@ -28,7 +28,7 @@ public class EnnemyHealth : MonoBehaviour
         // Setting up the references.
         anim = GetComponent<Animator>();
         enemyAudio = GetComponent<AudioSource>();
-        //hitParticles = GetComponentInChildren<ParticleSystem>();
+        hitParticles = GetComponentInChildren<ParticleSystem>();
         capsuleCollider = GetComponent<CapsuleCollider>();
         player = GameObject.FindGameObjectWithTag("Player");
         playerExperience = player.GetComponent<PlayerExperience>();
@@ -64,11 +64,13 @@ public class EnnemyHealth : MonoBehaviour
         // Reduce the current health by the amount of damage sustained.
         currentHealth -= amount;
 
-        // Set the position of the particle system to where the hit was sustained.
-        //hitParticles.transform.position = hitPoint;
+        if (!this.name.Contains("Demon")){
+            // Set the position of the particle system to where the hit was sustained.
+            hitParticles.transform.position = hitPoint;
 
-        // And play the particles.
-        //hitParticles.Play();
+            // And play the particles.
+            hitParticles.Play();
+        }
 
         // If the current health is less than or equal to zero...
         if (currentHealth <= 0)

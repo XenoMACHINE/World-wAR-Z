@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d81054b0fade347278b3858e95ed6e3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 2.5
 --- !u!114 &1180691978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39,10 +39,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa417aab222a84074a28deb36f58779b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 25
+  startingHealth: 35
   currentHealth: 0
   sinkSpeed: 2.5
-  scoreValue: 50
+  scoreValue: 100
   deathClip: {fileID: 0}
 --- !u!114 &5932613713123079407
 MonoBehaviour:

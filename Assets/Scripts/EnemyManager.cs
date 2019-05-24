@@ -7,6 +7,7 @@ public class EnemyManager : MonoBehaviour
     public float spawnTime = 3f;            // How long between each spawn.
     public Transform[] spawnPoints;         // An array of the spawn points this enemy can spawn from.
     [SerializeField] GameObject game = null;
+    public int levelNeeded = 1;
 
     void Start()
     {
@@ -14,10 +15,15 @@ public class EnemyManager : MonoBehaviour
         InvokeRepeating("Spawn", spawnTime, spawnTime);
     }
 
-    void Spawn()
+	private void Update()
+	{
+        spawnTime = spawnTime - (ScoreManager.Instance.Level / 5);
+	}
+
+	void Spawn()
     {
         // If the player has no health left...
-        if (playerHealth.currentHealth <= 0f || game.active == false)
+        if (playerHealth.currentHealth <= 0f || game.active == false || ScoreManager.Instance.Level < levelNeeded)
         {
             // ... exit the function.
             return;
