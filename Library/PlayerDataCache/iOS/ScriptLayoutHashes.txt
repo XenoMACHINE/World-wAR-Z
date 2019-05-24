@@ -93,8 +93,9 @@ fc108ce7d98c40ac0907e8ca7f500c76 UnityEngine.UI.dll:UnityEngine.UI.Text
 0fd6822f6177297bd0eb4d83cc7a9030 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 abf1930d8126d0b2e00e9449129a0190 UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 64e54c0cbb0177c5ea26f340efb9ff85 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
-71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.ScoreManager
+09e69b888d63f2a06bcaafe8f9407607 Assembly-CSharp.dll:.ScoreManager
 9e27f44bbf48228f203a37254d40f8ae Assembly-CSharp.dll:.JoystickSetterExample
+36314140b5d9418c4cb58c5ac80afe6c Assembly-CSharp.dll:.ItemEffects
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 06f0fef534ca4c1d6064fd77a26bf722 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
 780e8f682b3221346c034a6712a0fd25 UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
@@ -128,8 +129,11 @@ c523c98e03cb9b3101d2d593b2fee600 Assembly-CSharp.dll:.EnemyManager
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 4ff1f4e33e4f07633872a9b7138ad8d9 Assembly-CSharp.dll:.CloudContentManager
 71bb6a6b6c8f052f948db64c7dd3ca4f VuforiaScripts.dll:.DefaultInitializationErrorHandler
+046df804019e2526c7805ce520dc24ae Assembly-CSharp.dll:.PlayerAttack
+6a6585b08380b7d3699bbabc3eaf5070 Assembly-CSharp.dll:.EnemyHealth
 906368757786169410efa8bbfdcaaf2f Assembly-CSharp.dll:.VuMarkHandler
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.MessageBox
+895e8cd6e9aae6a69e3e8f9093a229c5 Assembly-CSharp.dll:.EnemyLoots
 303ad70ce203ad874efe2965d0fbcff9 Unity.Analytics.Tracker.dll:UnityEngine.Analytics.AnalyticsEventTracker
 7fb9de8dcf73854b6b328eca1f7a6e6d Unity.Analytics.Tracker.dll:UnityEngine.Analytics.AnalyticsTracker
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.LoadingScreen
@@ -249,6 +253,7 @@ ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networki
 9b895dcabbc1faf095c000c32d471fd0 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 5887ef1bc706b22b773d253fd443ceef UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.QualityDialog
+3efefd3c147356e5e80132cfc971be37 Assembly-CSharp.dll:.EnemyAttack
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.Drone
 510fefd6a544e16a3ffefa557ddcba39 Unity.TextMeshPro.dll:TMPro.PackageResourceImporterWindow
 71bb6a6b6c8f052f948db64c7dd3ca4f VuforiaScripts.dll:.DefaultTrackableEventHandler
@@ -288,6 +293,7 @@ dff7a11839abb9fb7222280cf3c0a95a VuforiaScripts.dll:.DefaultModelRecoEventHandle
 c046ab9d8d0d9d934535d6c0143b9ba1 Assembly-CSharp.dll:.EnnemyHealth
 13d0b808f4abc62877f71e012710d04a Assembly-CSharp.dll:.ModelTargetAugmentationHandler
 a4f0a4f62100f1a4fb5cbe0e00dde83f Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
+3cd659d339f095aaf9e5412a03e35824 Assembly-CSharp.dll:.PlayerExperience
 5fc094978ce3e3591a7500ed380d854a Unity.Analytics.DataPrivacy.dll:UnityEngine.Analytics.DataPrivacyButton
 716f7c2ef42786f749432eef57f8a2f1 Assembly-CSharp.dll:.CloudRecoEventHandler
 03fbac61e56b98eb4874a456217f1503 Assembly-CSharp.dll:.ModelSwap
@@ -300,6 +306,7 @@ a4eacf27427895be6b0448fa1d76e436 Assembly-CSharp.dll:.PanelShowHide
 d94025473ea0f97746a30235ecf4f742 Assembly-CSharp.dll:.VideoController
 9f830359d982ed4f9603a0d2251d14e6 Assembly-CSharp.dll:.CustomTrackableEventHandler
 d791aa6007fa3640be1164ea75bb087d Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
+20fde618f30661b127b92ed71255a2d3 Assembly-CSharp.dll:.PlayerEffects
 6f3f834630b8c842f18320156d98e63a Assembly-CSharp.dll:.ObjectRecoTrackableEventHandler
 fcb133e33f575c7df6371f505f660103 Assembly-CSharp.dll:.PlaneManagerCustom
 c6666661329916e218bee7f5e79e60f5 Unity.TextMeshPro.dll:TMPro.TextMeshPro
@@ -379,10 +386,3 @@ ffd8816d88b11c11d24af998cf7f948a Vuforia.UnityExtensions.dll:Vuforia.VuforiaConf
 69167579cf7fcbb2676fc1e675963dcd Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehaviour
 fbbf64dcbe0662e3eda1dec45ea8f895 Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 71bb6a6b6c8f052f948db64c7dd3ca4f Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
-36314140b5d9418c4cb58c5ac80afe6c Assembly-CSharp.dll:.ItemEffects
-3efefd3c147356e5e80132cfc971be37 Assembly-CSharp.dll:.EnemyAttack
-20fde618f30661b127b92ed71255a2d3 Assembly-CSharp.dll:.PlayerEffects
-6a6585b08380b7d3699bbabc3eaf5070 Assembly-CSharp.dll:.EnemyHealth
-046df804019e2526c7805ce520dc24ae Assembly-CSharp.dll:.PlayerAttack
-3cd659d339f095aaf9e5412a03e35824 Assembly-CSharp.dll:.PlayerExperience
-895e8cd6e9aae6a69e3e8f9093a229c5 Assembly-CSharp.dll:.EnemyLoots

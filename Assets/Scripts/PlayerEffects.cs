@@ -51,6 +51,17 @@ public class PlayerEffects : MonoBehaviour
     {
         if (itemEffect.healthRegeneration > 0 && playerHealth.currentHealth >= playerHealth.startingHealth) { return; }
 
+        foreach(ItemEffects item in itemEffects){
+            if (itemEffect.flashColor == item.flashColor){
+
+                item.timer = itemEffect.itemDuration;
+                damageImage.color = itemEffect.flashColor;
+                Destroy(itemEffect.gameObject);
+                return;
+            }
+        }
+
+
         itemEffect.itemSlider = Instantiate(sliderPrefab, hud.transform);
         itemEffect.slider = itemEffect.itemSlider.gameObject.GetComponent<Slider>();
 
